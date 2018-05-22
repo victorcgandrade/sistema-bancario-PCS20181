@@ -66,5 +66,15 @@ namespace Main.Resources
         {
 
         }
+
+        private void panel7_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
