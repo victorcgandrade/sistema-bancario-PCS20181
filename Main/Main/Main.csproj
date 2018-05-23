@@ -56,11 +56,11 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Dependente.cs" />
     <Compile Include="Endereco.cs" />
-    <Compile Include="Inicial.cs">
+    <Compile Include="InicialAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicial.Designer.cs">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <Compile Include="InicialAdministrador.Designer.cs">
+      <DependentUpon>InicialAdministrador.cs</DependentUpon>
     </Compile>
     <Compile Include="PessoaFisica.cs" />
     <Compile Include="PessoaJuridica.cs" />
@@ -69,8 +69,8 @@
     <EmbeddedResource Include="AdicionarCliente.resx">
       <DependentUpon>AdicionarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicial.resx">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="InicialAdministrador.resx">
+      <DependentUpon>InicialAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
