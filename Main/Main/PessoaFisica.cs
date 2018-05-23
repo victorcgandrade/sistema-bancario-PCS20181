@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Main.Models
 {
-    public class PessoaFisica : Titular
+    public class PessoaFisica : Cliente
     {
-        protected string cpf;
-        protected string rg;
         protected string profissao;
         protected float rendaMensal;
-        protected DateTime dataNascimento;
 
         public PessoaFisica()
         {
@@ -31,30 +28,6 @@ namespace Main.Models
         }
 
         //-------Metodos GET e SET 
-        public string CPF
-        {
-            get
-            {
-                return this.cpf;
-            }
-            set
-            {
-                this.cpf = value;
-            }
-        }
-
-        public string RG
-        {
-            get
-            {
-                return this.rg;
-            }
-            set
-            {
-                this.rg = value;
-            }
-        }
-
         public string Profissao
         {
             get
@@ -79,13 +52,5 @@ namespace Main.Models
             }
         }
         //Metodos GET e SET-------
-
-        //Obtem a idade do cliente pela data de nascimento e o ano atual
-        public int Idade()
-        {
-            var dataAtual = DateTime.Today;
-            int idade = dataAtual.Year - this.dataNascimento.Year;
-            return idade;
-        }
     }
 }

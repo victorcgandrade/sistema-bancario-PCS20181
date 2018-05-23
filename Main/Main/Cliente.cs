@@ -11,9 +11,12 @@ namespace Main.Models
         //Enumeracao para armazenar os possiveis estados de Cliente
         public enum EstadosCliente { Ativo, Inativo, Bloqueado };
 
-        //Enumeracao para armazenar os possiveis estados civiis de Cliente
+        //Enumeracao para armazenar os possiveis estados civis de Cliente
         public enum EstadosCivisCliente { Solteiro, Casado, Divorciado, Viuvo, Separado };
 
+        protected string cpf;
+        protected string rg;
+        protected DateTime dataNascimento;
         protected string email;
         protected string telefone;
         protected string celular;
@@ -23,6 +26,42 @@ namespace Main.Models
         protected Endereco endereco;
 
         //-------Metodos GET e SET 
+        public string CPF
+        {
+            get
+            {
+                return this.cpf;
+            }
+            set
+            {
+                this.cpf = value;
+            }
+        }
+
+        public string RG
+        {
+            get
+            {
+                return this.rg;
+            }
+            set
+            {
+                this.rg = value;
+            }
+        }
+
+        public DateTime DataNascimento
+        {
+            get
+            {
+                return this.dataNascimento;
+            }
+            set
+            {
+                this.dataNascimento = value;
+            }
+        }
+
         public string Email
         {
             get
@@ -107,5 +146,13 @@ namespace Main.Models
             }
         }
         //Metodos GET e SET-------
+
+        //Obtem a idade do cliente pela data de nascimento e o ano atual
+        public int Idade()
+        {
+            var dataAtual = DateTime.Today;
+            int idade = dataAtual.Year - this.dataNascimento.Year;
+            return idade;
+        }
     }
 }

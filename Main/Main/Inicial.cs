@@ -76,5 +76,20 @@ namespace Main.Resources
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Inicial_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

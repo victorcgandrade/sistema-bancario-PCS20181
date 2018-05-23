@@ -18,6 +18,11 @@ namespace Main.Models
         protected string estado;
         protected string pais;
 
+        public Endereco()
+        {
+
+        }
+
         //-------Metodos GET e SET 
         public int Id
         {

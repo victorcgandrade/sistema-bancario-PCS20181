@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarCliente.Designer.cs">
+      <DependentUpon>AdicionarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Dependente.cs" />
@@ -57,9 +63,12 @@
       <DependentUpon>Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="PessoaFisica.cs" />
-    <Compile Include="Titular.cs" />
+    <Compile Include="PessoaJuridica.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdicionarCliente.resx">
+      <DependentUpon>AdicionarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
     </EmbeddedResource>

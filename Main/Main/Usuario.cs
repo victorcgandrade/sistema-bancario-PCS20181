@@ -50,6 +50,7 @@ namespace Main.Models
         }
         //Metodos GET e SET-------
 
+        //Obtem nome completo a partir do primeiro nome e do sobrenome
         public string NomeCompleto()
         {
             string nomeCompleto = this.primeiroNome + " " + this.sobrenome;
