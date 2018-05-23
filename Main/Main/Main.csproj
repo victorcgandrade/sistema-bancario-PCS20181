@@ -48,12 +48,16 @@
   <ItemGroup>
     <Compile Include="Administrador.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Dependente.cs" />
+    <Compile Include="Endereco.cs" />
     <Compile Include="Inicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Inicial.Designer.cs">
       <DependentUpon>Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="PessoaFisica.cs" />
+    <Compile Include="Titular.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Inicial.resx">

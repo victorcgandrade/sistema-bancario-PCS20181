@@ -6,35 +6,55 @@ using System.Threading.Tasks;
 
 namespace Main.Models
 {
-    //Esta classe refere-se a todos os usuarios do sistema
     public abstract class Usuario
     {
-        private string nome;
-        private string senha;
+        protected int id;
+        protected string primeiroNome;
+        protected string sobrenome;
 
         //-------Metodos GET e SET 
-        public string Nome 
+        public int Id
         {
             get
             {
-                return this.nome;
+                return this.id;
             }
             set
             {
-                this.nome = value;
+                this.id = value;
             }
         }
 
-        public string Senha 
+        public string PrimeiroNome 
         {
-            get 
+            get
             {
-                return this.senha;
+                return this.primeiroNome;
             }
-            set 
+            set
             {
-                this.senha = value;
-            }       
+                this.primeiroNome = value;
+            }
         }
+
+        public string Sobrenome
+        {
+            get
+            {
+                return this.sobrenome;
+            }
+            set
+            {
+                this.sobrenome = value;
+            }
+        }
+        //Metodos GET e SET-------
+
+        public string NomeCompleto()
+        {
+            string nomeCompleto = this.primeiroNome + " " + this.sobrenome;
+            return nomeCompleto;
+        }
+
     }
 }

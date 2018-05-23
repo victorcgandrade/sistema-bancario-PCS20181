@@ -5,27 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Main.Models
-{ 
-    public class Administrador : Usuario
+{
+    public class PessoaFisica : Titular
     {
-
         protected string cpf;
         protected string rg;
-        protected string login;
-        protected string senha;
+        protected string profissao;
+        protected float rendaMensal;
+        protected DateTime dataNascimento;
 
-        public Administrador()
+        public PessoaFisica()
         {
         }
 
-        public Administrador(string primeiroNome, string sobrenome, string cpf, string rg, string login, string senha)
+        public PessoaFisica(string primeiroNome, string sobrenome, string cpf, string rg, string profissao, float rendaMensal, DateTime dataNascimento)
         {
             this.primeiroNome = primeiroNome;
             this.sobrenome = sobrenome;
             this.cpf = cpf;
             this.rg = rg;
-            this.login = login;
-            this.senha = senha;
+            this.profissao = profissao;
+            this.rendaMensal = rendaMensal;
+            this.dataNascimento = dataNascimento;
+            this.estado = EstadosCliente.Ativo; //Automaticamente, o estado de cliente torna ativo ao ser criado
         }
 
         //-------Metodos GET e SET 
@@ -53,29 +55,37 @@ namespace Main.Models
             }
         }
 
-        public string Login
+        public string Profissao
         {
             get
             {
-                return this.login;
+                return this.profissao;
             }
             set
             {
-                this.login = value;
+                this.profissao = value;
             }
         }
 
-        public string Senha
+        public float RendaMensal
         {
             get
             {
-                return this.senha;
+                return this.rendaMensal;
             }
             set
             {
-                this.senha = value;
+                this.rendaMensal = value;
             }
         }
         //Metodos GET e SET-------
+
+        //Obtem a idade do cliente pela data de nascimento e o ano atual
+        public int Idade()
+        {
+            var dataAtual = DateTime.Today;
+            int idade = dataAtual.Year - this.dataNascimento.Year;
+            return idade;
+        }
     }
 }
