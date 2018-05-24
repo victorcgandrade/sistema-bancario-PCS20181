@@ -15,11 +15,27 @@ namespace Main
         public TelaLogin()
         {
             InitializeComponent();
+            cmbBoxTipoUser.Items.Add("Administrador");
+            cmbBoxTipoUser.Items.Add("Cliente");
         }
 
         public void OnLoad()
         {
             
+        }
+
+        private void cmbBoxTipoUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbBoxTipoUser.SelectedItem.Equals("Administrador"))
+            {
+                tlpDadosAdm.Visible = true;
+                tlpDadosCliente.Visible = false;
+            }
+            else if (cmbBoxTipoUser.SelectedItem.Equals("Cliente"))
+            {
+                tlpDadosAdm.Visible = false;
+                tlpDadosCliente.Visible = true;
+            }
         }
     }
 }
