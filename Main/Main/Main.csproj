@@ -32,9 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Npgsql, Version=3.2.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.7\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,30 +52,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarCliente.cs">
+    <Compile Include="Models\Conexao.cs" />
+    <Compile Include="Views\AdicionarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarCliente.Designer.cs">
+    <Compile Include="Views\AdicionarCliente.Designer.cs">
       <DependentUpon>AdicionarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrador.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Dependente.cs" />
-    <Compile Include="Endereco.cs" />
-    <Compile Include="InicialAdministrador.cs">
+    <Compile Include="Models\Administrador.cs" />
+    <Compile Include="Views\AlterarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InicialAdministrador.Designer.cs">
+    <Compile Include="Views\AlterarCliente.Designer.cs">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Views\ConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultarCliente.Designer.cs">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dependente.cs" />
+    <Compile Include="Models\Endereco.cs" />
+    <Compile Include="Views\InicialAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\InicialAdministrador.Designer.cs">
       <DependentUpon>InicialAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="PessoaFisica.cs" />
-    <Compile Include="PessoaJuridica.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Models\PessoaFisica.cs" />
+    <Compile Include="Models\PessoaJuridica.cs" />
+    <Compile Include="Models\Program.cs" />
+    <Compile Include="Views\TemplateTelaAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TemplateTelaAdministrador.Designer.cs">
+      <DependentUpon>TemplateTelaAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdicionarCliente.resx">
+    <Compile Include="Views\VisualizarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\VisualizarCliente.Designer.cs">
+      <DependentUpon>VisualizarCliente.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\AdicionarCliente.resx">
       <DependentUpon>AdicionarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InicialAdministrador.resx">
+    <EmbeddedResource Include="Views\AlterarCliente.resx">
+      <DependentUpon>AlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConsultarCliente.resx">
+      <DependentUpon>ConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InicialAdministrador.resx">
       <DependentUpon>InicialAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -82,6 +120,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\TemplateTelaAdministrador.resx">
+      <DependentUpon>TemplateTelaAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VisualizarCliente.resx">
+      <DependentUpon>VisualizarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +141,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>

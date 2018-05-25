@@ -5,30 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Main.Models
-{ 
-    public class Administrador : Usuario
+{
+    public abstract class Usuario
     {
-
+        protected int id;
         protected string cpf;
         protected string rg;
-        protected string login;
-        protected string senha;
+        protected string primeiroNome;
+        protected string sobrenome;
 
-        public Administrador()
-        {
-        }
+        //-------Metodos GET e SET
 
-        public Administrador(string primeiroNome, string sobrenome, string cpf, string rg, string login, string senha)
-        {
-            this.primeiroNome = primeiroNome;
-            this.sobrenome = sobrenome;
-            this.cpf = cpf;
-            this.rg = rg;
-            this.login = login;
-            this.senha = senha;
-        }
-
-        //-------Metodos GET e SET 
         public string CPF
         {
             get
@@ -53,29 +40,49 @@ namespace Main.Models
             }
         }
 
-        public string Login
+        public int Id
         {
             get
             {
-                return this.login;
+                return this.id;
             }
             set
             {
-                this.login = value;
+                this.id = value;
             }
         }
 
-        public string Senha
+        public string PrimeiroNome 
         {
             get
             {
-                return this.senha;
+                return this.primeiroNome;
             }
             set
             {
-                this.senha = value;
+                this.primeiroNome = value;
+            }
+        }
+
+        public string Sobrenome
+        {
+            get
+            {
+                return this.sobrenome;
+            }
+            set
+            {
+                this.sobrenome = value;
             }
         }
         //Metodos GET e SET-------
+
+        //Obtem nome completo a partir do primeiro nome e do sobrenome
+        public string NomeCompleto()
+        {
+            string nomeCompleto = this.primeiroNome + " " + this.sobrenome;
+            return nomeCompleto;
+        }
+
     }
 }

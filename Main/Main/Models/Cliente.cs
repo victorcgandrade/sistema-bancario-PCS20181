@@ -14,8 +14,6 @@ namespace Main.Models
         //Enumeracao para armazenar os possiveis estados civis de Cliente
         public enum EstadosCivisCliente { Solteiro, Casado, Divorciado, Viuvo, Separado };
 
-        protected string cpf;
-        protected string rg;
         protected DateTime dataNascimento;
         protected string email;
         protected string telefone;
@@ -26,29 +24,6 @@ namespace Main.Models
         protected Endereco endereco;
 
         //-------Metodos GET e SET 
-        public string CPF
-        {
-            get
-            {
-                return this.cpf;
-            }
-            set
-            {
-                this.cpf = value;
-            }
-        }
-
-        public string RG
-        {
-            get
-            {
-                return this.rg;
-            }
-            set
-            {
-                this.rg = value;
-            }
-        }
 
         public DateTime DataNascimento
         {

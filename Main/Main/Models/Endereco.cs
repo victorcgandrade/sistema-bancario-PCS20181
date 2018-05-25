@@ -8,10 +8,14 @@ namespace Main.Models
 {
     public class Endereco
     {
+        //Enumeracao para os tipos de logradouro existentes (apenas alguns)
+        public enum TiposLogradouro { Rua, Rodovia, Avenida, Favela, Vila, Travessa };
+
         protected int id;
-        protected string logradouro;
-        protected string bairro;
+        protected TiposLogradouro logradouro;
+        protected string rua;
         protected int numero;
+        protected string bairro;
         protected string complemento;
         protected string cep;
         protected string cidade;
@@ -36,7 +40,7 @@ namespace Main.Models
             }
         }
 
-        public string Logradouro
+        public TiposLogradouro Logradouro
         {
             get
             {

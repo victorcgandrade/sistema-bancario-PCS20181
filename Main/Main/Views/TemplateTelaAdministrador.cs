@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Main.Views;
+
+namespace Main.Views
+{
+    public partial class TemplateTelaAdministrador : Form
+    {
+        public TemplateTelaAdministrador()
+        {
+            InitializeComponent();
+        }
+
+        private void TemplateTelaAdministrador_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
